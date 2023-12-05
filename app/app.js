@@ -1,15 +1,21 @@
 const express = require('express');
 const path = require('path');
 
+
 const app = express();
 
 // // Serve static files from the public directory
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Route for the login page
+//Route for the login page
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
+
+app.get('/', (req, res) => {
+    //res.send("TEST");
+    res.redirect('/login');
+  });
 
 // Start the server
 const port = 3000;
