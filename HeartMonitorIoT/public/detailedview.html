@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/stylesheets/detailedview.css">
+    <title>Heart Rate Monitor</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-title">ECE 413 Project</div>
+            <button class="logout-button"><a href="login.html">Logout</a></button>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detailedview.html">Detailed View</a></li>
+            <li><a href="weeklysummary.html">Weekly Summary</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="index.html">About</a></li>
+        </ul>
+    </aside>
+
+    <div class="container">
+        <h1>Your Detailed View</h1>
+
+        <section id="heart-rate-data">
+            <h2>Heart Rate</h2>
+            <div id="heart-rate-value">
+                <p>Current Heart Rate: <span id="current-heart-rate">-- BPM</span></p>
+            </div>
+        </section>
+
+        <section id="blood-oxygen-data">
+            <h2>Blood Oxygen Saturation Level</h2>
+            <div id="blood-oxygen-value">
+                <p>Current Oxygen Saturation: <span id="current-oxygen-level">-- %</span></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="./public/javascripts/main.js"></script>
+</body>
+</html>
