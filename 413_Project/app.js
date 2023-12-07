@@ -3,22 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 const bodyParser = require('body-parser');     // Parses JSON in body
 
-var homeRouter = require('./routes/home');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var studentsRouter = require('./routes/students');
-var customersRouter = require('./routes/customers');
-var detailsRouter = require('./routes/details');
-var dashboardRouter = require('./routes/dashboard');
-
+var apiRouter = require('./routes/api');
+var patientRouter = require('./routes/patient');
 var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 // This is to enable cross-origin access
 app.use(function (req, res, next) {
@@ -38,19 +28,20 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/home', homeRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/students', studentsRouter);
-app.use('/customers', customersRouter);
-app.use('/details', detailsRouter);
-app.use('/dashboard', dashboardRouter); // This is the route for the dashboard
+app.use('/api', apiRouter);
+app.use('/patient', patientRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -69,4 +60,5 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(3002);
+console.log('Listening on port: 3000');
 module.exports = app;
