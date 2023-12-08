@@ -12,35 +12,7 @@ let re=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
 let relower=/(.*[a-z].*)/;
 let reupper=/(.*[A-Z].*)/;
 let redigit=/(.*\d.*)/;
-/*
-function createStudent() {
-    // data validation
-    let txdata = {
-        First_name:    $("First_name_PA").val(),
-        Last_name:     $("Last_name_PA").val(),
-        Email:         $("Email_PA").val(),
-        password:      $("Password_PA").val(),
-    };
 
-    $.ajax({
-        url: '/patient/create',
-        method: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify(txdata),
-        dataType: 'json'
-    })
-    .done(function (data, textStatus, jqXHR) {
-        $('#rxData').html(JSON.stringify(data, null, 2));
-    })
-    .fail(function (data, textStatus, jqXHR) {
-        $('#rxData').html(JSON.stringify(data, null, 2));
-    });
-}
-
-$(function () {
-    $('#btnLogIn').click(createStudent);
-});
-*/
 
 function formValidate(){
     errorOutput.innerHTML="";

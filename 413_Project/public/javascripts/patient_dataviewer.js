@@ -65,20 +65,20 @@ function weekly_report(Data) {
                     label: 'Sensor Values',
                     data: [mean(HR_arr), mean(SPO2_arr), min(HR_arr), min(SPO2_arr), max(HR_arr), max(SPO2_arr)],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 205, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(0, 255, 255, 0.2)',
+                        'rgba(128, 0, 128, 0.2)',
+                        'rgba(128, 0, 0, 0.2)',
+                        'rgba(0, 0, 200, 0.2)',
+                        'rgba(255, 215, 0, 0.2)',
+                        'rgba(0, 128, 0, 0.2)',
                     ],
                     borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgb(255, 205, 86)',
-                        'rgb(75, 192, 192)',
-                        'rgb(54, 162, 235)',
-                        'rgb(153, 102, 255)',
+                        'rgba(0, 255, 255, 1)',
+                        'rgba(128, 0, 128, 1)',
+                        'rgba(128, 0, 0, 1)',
+                        'rgba(0, 0, 200, 1)',
+                        'rgba(180, 190, 50, 1)',
+                        'rgba(0, 190, 0, 1)',
                     ],
                     borderWidth: 1
                 }]
@@ -137,10 +137,10 @@ function daily_report(Data) {
                     label: "HR",
                     data: Data.HR,
                     backgroundColor: [
-                        'rgba(105, 0, 132, .2)',
+                        'rgba(180, 0, 132, .2)',
                     ],
                     borderColor: [
-                        'rgba(200, 99, 132, .7)',
+                        'rgba(200, 99, 70, .7)',
                     ],
                     borderWidth: 2
                 },
@@ -151,7 +151,8 @@ function daily_report(Data) {
                         'rgba(0, 137, 132, .2)',
                     ],
                     borderColor: [
-                        'rgba(0, 10, 130, .7)',
+                        'rgba(10, 200, 10, .7)',
+                        //'rgba(10, 200, 10, .7)', (dark green)
                     ],
                     borderWidth: 2
                 }
