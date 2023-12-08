@@ -3,145 +3,131 @@
 
 <head>
     <title>Group 9</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor, .fa-coffee {
+            font-size: 200px
+        }
+        
+    </style>
 </head>
 
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" class="navbar-brand mb-0 h1">
-            Group 9: ECE 413 Heart Monitor
-        </a>
-        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
 
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a href="index.html" class="nav-link active">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a href="loginPatient.html" class="nav-link">
-                        Patient Login
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a href="reference.html" class="nav-link">
-                        Reference
-                    </a>
-                </li>
-
-            </ul>
-
-
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+            <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="loginPatient.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-padding-large w3-hover-white">Login</a>
+            <a href="reference.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-padding-large w3-hover-white">Reference</a> -->
+            <!-- Add a "burger" icon for mobile navigation -->
+            <a href="javascript:void(0);" class="w3-bar-item w3-button w3-left" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-    </nav>
-    <div class="px-5">
-    <h1>Our Project</h1>
-    <p>
-        This is a project for ECE 513. The objective is to build a device that can monitor your heart rate and
-        oxigen saturation.
-        In addition, develop a website that allows the patient and physicians to login in an monitor the readings.
-        The project requirements are shown in the reference section.
-        Below is a short video of the heart monitor device using an argon microprocessor.
-    </p>
-
-    <div class="youtube">
-        <iframe width="100%" class="elementor-video-iframe" src="https://www.youtube.com/embed/ty9yZhvNAYk" 
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-    </div> 
+        <!-- Responsive navigation menu -->
+        <div id="Nav" class="w3-bar-block w3-hide" style="background-color: grey;">
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large" style="color: white">Home</a>
+            <a href="loginPatient.html" class="w3-bar-item w3-button w3-padding-large" style="color: white">Login</a>
+            <a href="reference.html" class="w3-bar-item w3-button w3-padding-large" style="color: white">Reference</a>
+        </div>
     </div>
 
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Members:</h5>
+    <!-- Header -->
+    <header class="w3-container w3-red w3-center" style="padding: 60px 16px">
+        <h1 class="w3-margin w3-jumbo">ECE 413 Project: Group 9</h1>
+    </header>
+
+    <div class="w3-row-padding w3-padding-64 w3-container" style="display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column;">
+        <div class="w3-content" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="w3-twothird" style="width: 100%;">
+                <h2>Project Description: Heart Rate Monitoring IoT</h2>
+                <p>
+                    The Heart Track application is a low-cost IoT-enabled web app for monitoring heart rate and blood oxygen saturation level throughout the day at a user (or physician defined, for ECE 513) rate.
+                    The IoT device uses a heart rate and oxygen sensor and will periodically remind users to take heart rate and blood oxygen saturation level measurements.
+                    The IoT device will transmit measurements to a web application through which users (or physicians, for ECE 513) can view their data.
+                    The time of day and rate at which measurement should be taken will be configurable by the user (or physician, for ECE 513)
+                    The Heart Track web application allows the user to monitor their heart rate and blood oxygen saturation level.
+                    The web application uses a responsive design to allow users to view the application seamlessly on desktop, tablet, and mobile devices.
+                </p>
+
+                <div class="youtube">
+                    <iframe width="100%" class="elementor-video-iframe" src="https://www.youtube.com/embed/ty9yZhvNAYk"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
             </div>
-            <div class="owl-carousel team-carousel position-relative">
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="images/mario_head.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
+            <div>
+                <div class="container">
+                        <h5>Members:</h5>
+                    </div>
+                        <div class="team-item"> 
+                            <img src="images/mario_head.jpg" style="object-fit: cover; display: flex; height: 400px; width: 400px; align-items: center; justify-content: center; text-align: center;">
                                 <h3>Mario Weiler</h3>
-                         </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                             
-                            </div>
+                                <p>mariow@arizona.edu</p>
+                           
                         </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="images/Chunlin.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
+                        <div class="team-item">   
+                            <img src="images/Antony.jpeg" style="object-fit: cover; display: flex; height: 400px; width: 400px;">
                             <div class="mt-auto p-4">
-                                <h3>Chun-Lin Huang</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">Back-End, DataBase</h6>
-                                <p class="m-0">Hello, nice to meet you, my name is Chun Lin Huang, just call me Stanley, I am from Taiwan. Research focuses on AI and security.</p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <h3>Antony Mangala</h3>
+                                <p>antonymangala@arizona.edu</p>                      
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="images/Alonso_pic.jpg" style="object-fit: cover;">
+                        <div class="team-item">
+                            <img  src="images/richardo.jpeg" style="object-fit: cover; display: flex; height: 400px; width: 400px;">
+                                <div class="mt-auto p-4">
+                                    <h3>Richardo Larez</h3>
+                                    <p>richardolarez@arizona.edu</p>
+                                </div>
                         </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
-                                <h3>Alonso Montesinos</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">Front-End, DataBase</h6>
-                                <p class="m-0">Hi, my name is Alonso and I'm pursuing a MS in Electrical
-                                    Engineering at the University of Arizona.
-                                    During my free time I enjoy playing tennis.</p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
-
-    </div>
-
-
-
-
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-        <script src="javascripts/lib/easing/easing.min.js"></script>
-        <script src="javascripts/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="javascripts/lib/waypoints/waypoints.min.js"></script>
-        <script src="javascripts/lib/tempusdominus/js/moment.min.js"></script>
-        <script src="javascripts/lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="javascripts/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="javascripts/lib/easing/easing.min.js"></script>
+    <script src="javascripts/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="javascripts/lib/waypoints/waypoints.min.js"></script>
+    <script src="javascripts/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="javascripts/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="javascripts/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="javascripts/js/main.js"></script>
+
+    <script>
+        function toggleNavbar() {
+            var x = document.getElementById("Nav");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
 </body>
+
+<footer class="w3-container w3-indigo w3-center" style="padding-bottom: 0.5vh;">
+    <h1 class="w3-margin w3-small w3-left-align">ECE 413 Project: Group 9<br>
+    University of Arizona in partnership with Monash University
+    </h1>
+</footer>
 
 </html>
