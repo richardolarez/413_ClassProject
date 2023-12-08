@@ -152,7 +152,6 @@ function daily_report(Data) {
                     ],
                     borderColor: [
                         'rgba(10, 200, 10, .7)',
-                        //'rgba(10, 200, 10, .7)', (dark green)
                     ],
                     borderWidth: 2
                 }
@@ -201,7 +200,6 @@ function Update_Info() {
         First_name: $('#first_name').val(),
         Last_name: $('#last_name').val(),
         Email: $('#email').val(),
-        physician: $('#physician').val(),
     };
 
     $.ajax({
