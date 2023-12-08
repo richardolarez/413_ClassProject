@@ -87,7 +87,7 @@ router.get("/status", function (req, res) {
         const decoded = jwt.decode(token, secret);
         console.log(decoded.Email)
         // Send back email and last access
-        Patient.find({ Email: decoded.Email }, "First_name Last_name Email deviceID lastAccess physician device_name device_sn", function (err, users) {
+        Patient.find({ Email: decoded.Email }, "First_name Last_name Email deviceID lastAccess device_name device_sn", function (err, users) {
             if (err) {
                 res.status(400).json({ success: false, message: "Error contacting DB. Please contact support." });
             }
@@ -124,7 +124,7 @@ router.post("/update_device", function (req, res) {
 });
 
 router.post("/update_info", function (req, res) {
-    Patient.findOneAndUpdate({ _id: req.body._id }, { "$set": { "First_name": req.body.First_name, "Last_name": req.body.Last_name, "Email": req.body.Email, "physician": req.body.physician } }, function (err, doc) {
+    Patient.findOneAndUpdate({ _id: req.body._id }, { "$set": { "First_name": req.body.First_name, "Last_name": req.body.Last_name, "Email": req.body.Email} }, function (err, doc) {
         if (err) {
             let msgStr = `Something wrong....`;
             res.status(201).json({ message: msgStr, err: err });
