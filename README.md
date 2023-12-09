@@ -11,11 +11,11 @@ Running the project:
   First start a local instance of MongoDB
   first go to the directory /413_Project
   Then you can run run npm start
-  The app will then be on http://localhost:3000
+  The app will then be on http://localhost:3002
 
 The main API is used for the webhook to send data from the device to the server that then saves it to the database.
 
-This api is http:localhost:3000/api/particle_data
+This api is http:localhost:3002/api/particle_data
 
 Login Credentials
   mario@email.com
