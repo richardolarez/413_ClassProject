@@ -26,7 +26,12 @@ Link to Server
   http://ec2-18-116-36-90.us-east-2.compute.amazonaws.com:3000/
 
 Pitch Video
+https://youtu.be/UlINpHNgYcA
 
 Demonstration Video
+
+UX Video
+https://youtu.be/R7MJeDkFOvg
+
 
   
