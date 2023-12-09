@@ -2,7 +2,7 @@ import requests
 import random
 import time
 
-url = 'http://localhost:3002/api/particle_data'
+url = 'http://ec2-18-116-36-90.us-east-2.compute.amazonaws.com:3002/api/particle_data'
 for i in range(20):
     myobj = {"event":"hr",
             "HR":"%s"%random.randint(70, 100),
