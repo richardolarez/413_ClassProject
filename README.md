@@ -28,7 +28,8 @@ Link to Server
 Pitch Video
 https://youtu.be/UlINpHNgYcA
 
-Demonstration Video
+Demonstration Video Playlist
+https://www.youtube.com/playlist?list=PL-UTUgYILjql6dlFLnReDSbfXE8jKQpjm
 
 UX Video
 https://youtu.be/R7MJeDkFOvg
